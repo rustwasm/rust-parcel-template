@@ -1,6 +1,7 @@
 language: rust
 sudo: false
- INSTALL_NODE_VIA_NVM: &INSTALL_NODE_VIA_NVM
+
+INSTALL_NODE_VIA_NVM: &INSTALL_NODE_VIA_NVM
   |
     rustup target add wasm32-unknown-unknown
     curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | bash
