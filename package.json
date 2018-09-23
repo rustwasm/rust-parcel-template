@@ -5,8 +5,8 @@
   "repository": "https://github.com/rustwasm/rust-parcel-template",
   "license": "Apache-2.0/MIT",
   "scripts": {
-    "start": "parcel watch index.html",
-    "build": "parcel index.html"
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
   },
   "bin": {
     "create-rust-parcel": ".bin/create-rust-parcel.js"
