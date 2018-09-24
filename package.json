@@ -2,7 +2,7 @@
   "author": "Sendil Kumar N<sendilkumarn@live.com>",
   "name": "create-rust-parcel",
   "version": "0.0.0",
-  "repository": "https://github.com/rustwasm/rust-parcel-template",
+  "repository": "https://github.com/sendilkumarn/rust-parcel-template",
   "license": "Apache-2.0/MIT",
   "scripts": {
     "start": "parcel index.html",
