@@ -19,7 +19,7 @@ clone.on("close", (code) => {
     console.error()
     process.exit(code);
   } else {
-    console.log("🦀Rust + 🕸 WebAssembly + Parcel = ❤️");
+    console.log("🦀Rust + 🕸 WebAssembly + 📦Parcel = ❤️");
     // TODO(sven): npm install
   }
 });
