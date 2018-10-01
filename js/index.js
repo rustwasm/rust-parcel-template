@@ -1,2 +1,2 @@
-import { module } from '../crate/src/lib.rs'
+import * as module from '../crate/Cargo.toml'
 module.run();
