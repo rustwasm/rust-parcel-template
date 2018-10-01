@@ -15,11 +15,22 @@ const clone = spawn("git", ["clone", "https://github.com/rustwasm/rust-parcel-te
 
 clone.on("close", (code) => {
   if (code !== 0) {
-    // TODO(sven): handle error here
-    console.error()
-    process.exit(code);
+    handleError("install", code);
   } else {
     console.log("🦀Rust + 🕸 WebAssembly + 📦Parcel = ❤️");
-    // TODO(sven): npm install
+    
+    const install = spawn('npm', ['install'], { cwd: folderName });
+    install.on("close", (code) => {
+      if (code !== 0) {
+        handleError("install", code);
+      } else {
+        console.log(" Installed dependencies ✅ ");
+      }
+    });
   }
 });
+
+function handleError(type, errCode) {
+    console.error()
+    process.exit(code);
+}
