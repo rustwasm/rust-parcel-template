@@ -1,2 +1,2 @@
-import * as module from '../crate/Cargo.toml'
+import module from '../crate/Cargo.toml'
 module.run();
