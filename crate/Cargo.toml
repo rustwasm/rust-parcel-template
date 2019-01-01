@@ -23,7 +23,8 @@ console_error_panic_hook = { version = "0.1.5", optional = true }
 
 # `wee_alloc` is a tiny allocator for wasm that is only ~1K in code size
 # compared to the default allocator's ~10K. It is slower than the default
-# allocator, however.
+# allocator, however. Also as of wee_alloc v0.4.2, does not yet work on stable
+# (tested with rust v1.31.1).
 wee_alloc = { version = "0.4.2", optional = true }
 
 [dependencies.web-sys]
@@ -37,4 +38,4 @@ features = [
 ]
 
 [features]
-default = ["console_error_panic_hook", "wee_alloc"]
+default = ["console_error_panic_hook"]
