@@ -11,6 +11,8 @@ cfg_if! {
     if #[cfg(feature = "console_error_panic_hook")] {
         extern crate console_error_panic_hook;
         use console_error_panic_hook::set_once as set_panic_hook;
+    } else {
+        fn set_panic_hook() {}
     }
 }
 
@@ -27,6 +29,10 @@ cfg_if! {
 // Called by our JS entry point to run the example
 #[wasm_bindgen]
 pub fn run() -> Result<(), JsValue> {
+    // If the `console_error_panic_hook` feature is enabled this will set a panic hook, otherwise
+    // it will do nothing.
+    set_panic_hook();
+
     // Use `web_sys`'s global `window` function to get a handle on the global
     // window object.
     let window = web_sys::window().expect("no global `window` exists");
