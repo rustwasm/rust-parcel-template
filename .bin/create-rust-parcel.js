@@ -32,5 +32,5 @@ clone.on("close", (code) => {
 
 function handleError(type, errCode) {
     console.error()
-    process.exit(code);
+    process.exit(errCode);
 }
